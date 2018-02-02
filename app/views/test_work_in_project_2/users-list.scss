@@ -1,0 +1,135 @@
+.user-list-view {
+	margin: 2rem;
+
+	.header {
+		background-color: #113e63;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		color: $white;
+		padding: 8px 16px;
+	}
+
+	.search-input-container {
+		background-color: $white;
+		min-width: 220px;
+	}
+
+	input.search-input {
+		border: 0px;
+		border-radius: 0px;
+		margin-bottom: 0;
+		padding: 0px;
+		max-width: 250px;
+		min-width: 150px;
+	}
+
+	input.search-input.ng-touched {
+		border: 0px;
+		padding: 0px;
+	}
+
+	.search-input-submit {
+		color: #5f6062;
+		padding: 12px 12px;
+	}
+
+	.disabled {
+		color: $ygrene-light-gray;
+	}
+
+	.list-container {
+		border: 1px solid $gray-dark;
+	}
+
+	.list-content {
+		padding: 1rem;
+		border-bottom: 1px solid $gray;
+	}
+
+	.status {
+		padding: 0;
+		max-width: 30px;
+		min-width: 30px;
+	}
+
+	.fa-user {
+		color:  darken($ygrene-green, 10%);
+	}
+
+	.admin-text {
+		color: $ygrene-blue;
+	}
+
+	.username {
+		font-weight: 600;
+		padding: 0 16px 8px;
+	}
+
+	.id {
+		font-size: 12px;
+		padding: 0 1rem 3px 1rem;
+	}
+
+	.edit {
+		font-size: 20px;
+		color: $ygrene-blue;
+		padding: 0 1rem;
+	}
+
+	.edit:hover {
+		color: darken($ygrene-blue, 30%);
+		cursor: pointer;
+	}
+
+	.offices {
+		padding: 0 1rem;
+		font-weight: 600;
+		font-size: 12px;
+	}
+
+	.user-switch {
+		border-radius: 5px;
+		margin: 0 5px;
+	}
+
+	.switch-button {
+		padding: 10px 4px;
+	}
+
+	span.office {
+		font-weight: 400;
+	}
+
+	.inactive {
+		margin-right: 5px !important;
+	}
+
+	.inactive-user {
+		color: $white;
+	}
+
+	.delete {
+		font-size: 20px;
+		color: $ygrene-blue;
+		padding: 0;
+	}
+
+	.delete:hover {
+		color: darken($ygrene-blue, 30%);
+		cursor: pointer;
+	}
+}
+
+
+@media only screen and (max-width:500px) {
+	.user-list-view {
+		margin: 1rem 0;
+
+		.header {
+			border-radius: 0;
+		}
+
+	}
+
+
+}

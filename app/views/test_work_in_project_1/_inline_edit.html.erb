@@ -1,0 +1,20 @@
+<div class='edit_form shipment_editing_block'>
+  <h2>Edit Shipping Information
+    <span style='display:none' class='show_form'>
+      <a href="#" onclick="$('.shipment_editing_block .form_explained').slideToggle(); return false;">(show/hide)</a>
+    </span>
+  </h2>
+
+  <div class='form_explained'>
+    <h4>Edit your shipping information below</h4>
+
+    <div class='form_contents'>
+      <% if current_user_owns_box? %>
+        <%= render :partial => "new_form" %>
+      <% else %>
+ I'm sorry, but you must be logged in to edit your shipment information.<br /><br />
+      <% end %>
+    </div>
+  </div>
+  <div class='shipping_options'></div>
+</div>

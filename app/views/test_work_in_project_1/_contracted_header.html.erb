@@ -1,0 +1,165 @@
+<div class="primary-navigation">
+  <div id='special_notification'></div>
+  <div class="desktop-menu menu hidden-md-down qa-hook-large-navigation">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 logo-container">
+        <%= link_to root_path do %>
+          <%= image_tag "contracted/logo.svg", class: "my-2", width: "146px", alt: "Gazelle Logo" %>
+        <% end %>
+      </div>
+      <div class="col align-items-stretch">
+        <div class="d-flex flex-column fill_height" >
+          <div class="text-right smaller_links" >
+            <div class="mb-1 gray_links">
+              <%= link_to 'Help', help_faq_sell_path %>
+              <span>|</span>
+              <%= link_to 'The Gazelle Advantage', gazelle_reviews_path, id: 'header_browse_category_link' %>
+            </div>
+            <div class="qa-hook-top-links" id="omnilogin">
+              <%= link_to 'Sell in Bulk', business_index_path %> <span>|</span>
+              <%= link_to 'How It Works', help_how_it_works_path, id: 'how_it_works_link', class: "qa-hook-how-it-works-link" %> <span>|</span>
+              <%= link_to "Locate a Kiosk", "https://locations.gazelle.com/", target: "_blank", rel: "noopener noreferrer" %> <span>|</span>
+              <%= link_to 'Track Offers', track_path, class: 'track_my_offers qa-hook-track-offers-link' %> <span>|</span>
+              <%= link_to 'Log in', login_direct_path, class: 'login qa-hook-login-link' %>
+            </div>
+          </div>
+          <div class="mt-auto">
+            <div class="row hidden-md-down">
+              <div class="col-8 offset-1 text-center">
+                <div class="btn-group buy-sell-tabs qa-hook-buy-sell-tabs" role="group">
+                  <%= link_to "SELL", trade_in_path, class: "btn btn-primary qa-hook-sell-link active-tab" %>
+                  <%= link_to "BUY CERTIFIED", "//buy.gazelle.com", class: "btn btn-default blue-100 qa-hook-buy-cert-link" %>
+                </div>
+              </div>
+              <div class="col-3 text-right">
+                <div class="checkout_area pull-right">
+                  <%= render partial: "page_frame/activity_feed" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu menu hidden-lg-up">
+    <div class="row mb-2 align-items-center">
+      <div class="col-3">
+        <%= link_to "#mainMenu", "class"=>"orange", "aria-expanded"=>"false", "aria-controls"=>"mainMenu", "data-toggle"=>"collapse" do %>
+          <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+        <% end %>
+      </div>
+      <div class="col-6 text-center logo">
+        <%= link_to root_path do %>
+          <%= image_tag "contracted/logo.svg", alt: "Gazelle Logo" %>
+        <% end %>
+      </div>
+      <div class="col-3">
+        <div class="mobile_checkout_area pull-right">
+          <div class="activity_feed pull-right">
+            <div class="cart"></div>
+            <div class="inline_cart"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 collapse" id="mainMenu">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to 'Sell an Item', trade_in_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Sell in Bulk', business_index_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Buy Certified', "//buy.gazelle.com", class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'How it Works', help_how_it_works_path, id: 'how_it_works_link', class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Locate a Kiosk", "https://locations.gazelle.com/", target: "_blank", rel: "noopener noreferrer", class: "nav-link" %>
+          </li>
+          <% if false %>
+            <li class="nav-item active">
+              <%= link_to 'Track Offers', track_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to 'Log in', login_direct_path, class: 'nav-link' %>
+            </li>
+          <% end %>
+          <li class="nav-item active">
+            <%= link_to 'The Gazelle Advantage', gazelle_reviews_path, id: 'header_browse_category_link', class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Help', help_faq_sell_path, class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row hidden-md-down secondary-nav qa-hook-secondary-nav">
+  <% classes = "first-level" %>
+  <div class="col-12 text-center">
+    <nav>
+      <div class="btn-group" role="group">
+        <%= link_to "IPHONES", iphone_path, class: "#{classes} qa-hook-iphone-link" %>
+        <%= link_to "SAMSUNG PHONES", cell_phone_path(stacks: ['samsung']), class: "#{classes} qa-hook-samsung-link" %>
+        <div class="btn-group hover-group">
+          <%= link_to "OTHER CELLPHONES", cell_phone_path, class: "#{classes} dropdown-toggle qa-hook-other-cellphones-link", "aria-haspopup"=>"true", "aria-expanded"=>"false" %>
+          <div class="dropdown-menu">
+            <%= link_to "ALL", cell_phone_path, class: "dropdown-item" %>
+            <%= link_to "Google", cell_phone_path(stacks: ['google']), class: "dropdown-item" %>
+            <%= link_to "HTC", cell_phone_path(stacks: ['htc']), class: "dropdown-item" %>
+            <%= link_to "LG", cell_phone_path(stacks: ['lg']), class: "dropdown-item" %>
+            <%= link_to "Nokia", cell_phone_path(stacks: ['nokia']), class: "dropdown-item" %>
+            <%= link_to "Motorola", cell_phone_path(stacks: ['motorola']), class: "dropdown-item" %>
+            <%= link_to "BlackBerry", cell_phone_path(stacks: ['blackberry-rim']), class: "dropdown-item" %>
+          </div>
+        </div>
+        <%= link_to "IPADS", ipad_path, class: "#{classes} qa-hook-ipads-link" %>
+        <div class="btn-group hover-group">
+          <%= link_to "OTHER TABLETS", tablet_path, class: "#{classes} dropdown-toggle qa-hook-other-tablets-link", "aria-haspopup"=>"true", "aria-expanded"=>"false" %>
+          <div class="dropdown-menu">
+            <%= link_to "ALL", tablet_path, class: "dropdown-item" %>
+            <%= link_to "Amazon", tablet_path(stacks: ['amazon']), class: "dropdown-item" %>
+            <%= link_to "Asus", tablet_path(stacks: ['asus']), class: "dropdown-item" %>
+            <%= link_to "Google", tablet_path(stacks: ['google']), class: "dropdown-item" %>
+            <%= link_to "Microsoft", tablet_path(stacks: ['microsoft']), class: "dropdown-item" %>
+            <%= link_to "Samsung", tablet_path(stacks: ['samsung']), class: "dropdown-item" %>
+          </div>
+        </div>
+        <div class="btn-group hover-group">
+          <%= link_to "APPLE COMPUTERS", apple_computers_path, class: "#{classes} dropdown-toggle qa-hook-apple-computers-link", "aria-haspopup"=>"true", "aria-expanded"=>"false"  %>
+          <div class="dropdown-menu">
+            <%= link_to "ALL", apple_computers_path, class: "dropdown-item" %>
+            <%= link_to "Macbook", macbook_path, class: "dropdown-item" %>
+            <%= link_to "Mac", mac_path, class: "dropdown-item" %>
+          </div>
+        </div>
+        <%= link_to "IPODS", ipod_path, class: "#{classes} qa-hook-ipods-link" %>
+        <div class="btn-group hover-group">
+          <%= link_to "OTHER PRODUCTS", other_apple_products_path, class: "#{classes} dropdown-toggle qa-hook-other-products-link", "aria-haspopup"=>"true", "aria-expanded"=>"false"   %>
+          <div class="dropdown-menu">
+            <%= link_to "ALL", other_apple_products_path, class: "dropdown-item" %>
+            <%= link_to "Apple TV", apple_tv_path, class: "dropdown-item"  %>
+            <%= link_to "Apple Display", apple_display_path, class: "dropdown-item"  %>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="row light-bottom-border-spacer hidden-lg-up">&nbsp;</div>
+<%= javascript_injector 'logged_in_omnilogin_view' do -%>
+  <%= link_to 'Sell in Bulk', business_index_path %> <span>|</span>
+  <%= link_to 'How It Works', help_how_it_works_path, id: 'how_it_works_link', class: "qa-hook-how-it-works-link" %> <span>|</span>
+  <%= link_to "Locate a Kiosk", "https://locations.gazelle.com/", target: "_blank", rel: "noopener noreferrer" %> <span>|</span>
+
+  <%= link_to_unless_current('Update Account', account_settings_path, class: 'track_my_offers') %>
+  <span>|</span>
+  <%= link_to_unless_current('Track My Offers', account_transactions_path, class: 'track_my_offers') %>
+  <span>|</span>
+  <%= link_to 'Logout', logout_path, class: 'track_my_offers logout' %>
+<%- end -%>

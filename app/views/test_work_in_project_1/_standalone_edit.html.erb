@@ -1,0 +1,29 @@
+<%-
+  @full_width_body = true
+-%>
+
+<%= render partial: "shared/checkout_progress", locals: {active: :shipping, :previously_actived => [:device, :offer, :payment]} %>
+<div class="row">
+  <div id='checkout_content' class='shipment_editing_block col-lg-9'>
+   <h2 class='form_shown'>Provide your shipping address</h2>
+    <h2 style='display:none' class='show_form'>Your Shipping Address</h2>
+   <div class='form_explained'>
+    <h3>We use this information to create your shipping labels so you can send your item to us for free!</h3>
+
+      <%= render partial: "new_form" %>
+   </div>
+   <div class='shipping_options'></div>
+  </div>
+</div>
+<% if !logged_in? && @can_copy_payment_to_shipping %>
+  <div data-shipping-fields='[
+    { field_name:"shipping_information_first_name", field_value:"<%= @box.payment_information.payable_to.split(' ').first if @box.payment_information.payable_to %>"},
+    { field_name:"shipping_information_last_name", field_value:"<%= @box.payment_information.payable_to.split(' ').last if @box.payment_information.payable_to %>" },
+    { field_name:"shipping_information_street_name1", field_value:"<%= @box.payment_information.street_name1 %>" },
+    { field_name:"shipping_information_street_name2", field_value:"<%= @box.payment_information.street_name2 %>" },
+    { field_name:"shipping_information_city", field_value:"<%= @box.payment_information.city %>" },
+    { field_name:"shipping_information_state", field_value:"<%= @box.payment_information.state %>" },
+    { field_name:"shipping_information_zipcode", field_value:"<%= @box.payment_information.zipcode %>" },
+    { field_name:"shipping_information_telephone", field_value:"<%= @box.payment_information.telephone if @box.payment_information.telephone %>" }
+  ]'>
+<% end %>

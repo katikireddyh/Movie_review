@@ -1,0 +1,50 @@
+<div class="user-list-view">
+	<tab-component menu-options="$ctrl.menuOptions"></tab-component>
+	<div class="user-list">
+		<div class="header grid-block vertical">
+			<div class="primary-line grid-block">
+				<div class="grid-block expand">
+					<div class="search-input-container grid-block shrink">
+						<div class="search-input-submit v-align"><i class="fa fa-search"></i></div>
+						<input class="search-input" type="text"
+							   placeholder="Name, ID or Offices"
+							   ng-model="$ctrl.query"
+							   ng-focus="$ctrl.searchIsFocused = true"
+							   ng-blur="$ctrl.searchFocused = false"
+							   ng-model-options="{debounce: 500}">
+					</div>
+				</div>
+				<switch class="v-align user-switch"
+						left-label="'Active'" left-value="false"
+						right-label="'All'" right-value="true"
+						model="$ctrl.checked"
+						ng-click="$ctrl.getUsers()">
+				</switch>
+				<div class="new-user-button button grid-block shrink" ng-click="$ctrl.showAddUserForm()"><i class="fa fa-user-plus"></i></div>
+			</div>
+		</div>
+		<div class="list-container grid-block vertical">
+			<div class="list-content grid-block"
+				 dir-paginate="user in $ctrl.usersList | filter : $ctrl.query | itemsPerPage: $ctrl.usersPerPage"
+				 total-items="$ctrl.totalUsers" current-page="$ctrl.currentPage">
+				 <div class="status grid-block vertical">
+				 	<span  class="fa-stack"><i class="fa fa-user fa-stack-1x"></i><i ng-if="!user.active" class="fa fa-ban fa-stack-2x"></i></span>
+				 </div>
+				 <div class="grid-block vertical noscroll">
+					 <div class="username grid-block shrink">{{user.name}}</div>
+					 <div class="id grid-block expand noscroll">
+					 	<span class="admin-text" ng-if="user.company_admin">Administrator&nbsp</span><span ng-if="user.company_admin">|&nbsp</span>{{user.id}}
+					 </div>
+					 <div class="offices">Offices:&nbsp
+						 <span class="office" ng-repeat="office in $ctrl.userOffices(user)">{{office}}<span ng-if="!$last">,&nbsp</span></span>
+					 </div>
+				 </div>
+				 <div class="edit grid-block shrink align-right v-align" ng-if="user.can_edit" ng-click="$ctrl.showEditUserForm(user)"><i class="fa fa-pencil"></i></div>
+				 <div class="delete grid-block shrink align-right v-align" ng-if="user.can_delete" ng-hide="$ctrl.loggedUser(user)" ng-click="$ctrl.deleteUser(user)"><i class="fa fa-trash-o"></i></div>
+			</div>
+			<dir-pagination-controls on-page-change="$ctrl.pageChanged(newPageNumber)" direction-links="true" boundary-links="true">
+			</dir-pagination-controls>
+		</div>
+	</div>
+
+</div>

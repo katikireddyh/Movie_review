@@ -1,0 +1,162 @@
+<div class="row light-blue-100-bg mt-5 footer-container">
+
+<%- if configatron.enable_tracking -%>
+  <script src="//px.spiceworks.com/px.js" async></script>
+  <script>
+    var SWPX = SWPX || {};
+    SWPX.cmd = SWPX.cmd || [];
+    SWPX.cmd.push(function() {
+      SWPX.pixel.setPixel('2wqs');
+      // Uncomment the following line to place an identifer
+      // SWPX.pixel.setIdentifier('');
+      SWPX.pixel.fire();
+    });
+  </script>
+
+  <noscript>
+    <img src="//px.spiceworks.com/px/2wqs" height="1" width="1">
+  </noscript>
+<%- end -%>
+
+  <div class="col-xs-12 col-lg-7 p-3">
+    <div class="row">
+      <div class="col-12 pb-3">
+        <h4 class="brandon-light text-uppercase font-weight-normal blue-100">Connect with Us</h4>
+      </div>
+      <div class="col-6 col-md-4 pb-3">
+        <%= link_to '//twitter.com/gazelle' do %>
+          <%= image_tag 'contracted/social_twitter.svg', class: "icon" %>
+          <%= twitter_followers_count %>
+        <% end %>
+      </div>
+      <div class="col-6 col-md-4 pb-3">
+        <%= link_to '//plus.google.com/+gazelle' do %>
+          <%= image_tag 'contracted/social_google.svg', class: "icon" %>
+          <%= google_plus_likes_count %>
+        <% end %>
+      </div>
+      <!-- data-wait-for-content ensures that the grid always looks good even if this content is blocked -->
+      <div class="col-6 col-md-4 pb-3" data-wait-for-content="true">
+        <!-- Extole Placeholder -->
+        <span id="extole-zone-store_global_footer"></span>
+      </div>
+      <div class="col-6 col-md-4 pb-3">
+        <%= link_to '//facebook.com/Gazelle.com' do %>
+          <%= image_tag 'contracted/social_facebook.svg', class: "icon" %>
+          <%= facebook_likes_count %>
+        <% end %>
+      </div>
+      <div class="col-6 col-md-4 pb-3">
+        <%= link_to '//gazelle.com/thehorn' do %>
+          <%= image_tag 'contracted/social_blog.svg', class: "icon" %>
+          Read Our Blog
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col p-3 block-children">
+    <%= link_to 'About Gazelle', our_story_path %>
+    <%= link_to 'Press', media_path %>
+    <%= link_to 'Legal', legal_path %>
+    <%= link_to 'Contact', contact_path %>
+    <%= link_to 'Careers', careers_path %>
+    <%= link_to 'Gazelle for Good', 'https://gazelle.com/gazelleforgood' %>
+    <%= link_to 'Bulk Sales', business_index_path %>
+    <%= link_to 'Become an Affiliate', affiliates_path %>
+    <%= link_to 'Sitemap', '/sitemap' %>
+  </div>
+  <div class="col p-3">
+    <div class="row">
+      <div class="col-12 pb-3">
+        <h4 class="brandon-light text-uppercase font-weight-normal blue-100">Need Help?</h4>
+      </div>
+      <div class="col-12">
+        <p>Search our FAQs in our <%= link_to 'Help Center', help_faq_sell_path %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-lg-8">
+    <div class="row">
+      <div class="col-12 pt-3">
+        <h5 class="brandon-light text-uppercase font-weight-normal blue-100">Popular Searches</h5>
+      </div>
+      <div class="col-6 p-1 col-sm-auto">
+        <ul class="popular-search-links">
+          <li><a href="https://www.gazelle.com/sell/cell-phone">Sell My Cell Phone</a></li>
+          <li><a href="https://www.gazelle.com/iphone">Sell Your iPhone</a></li>
+          <li><a href="https://www.gazelle.com/samsung">Sell Samsung Galaxy</a></li>
+          <li><a href="https://www.gazelle.com/sell/macbook">MacBook Trade In</a></li>
+          <li><a href="https://www.gazelle.com/sell/cell-phone/blackberry-rim">Sell BlackBerry</a></li>
+          <li><a href="https://www.gazelle.com/sell/cell-phone/samsung">Sell Samsung Phone</a></li>
+          <li><a href="https://www.gazelle.com/iphone/iphone-7">Sell iPhone 7</a></li>
+        </ul>
+      </div>
+      <div class="col-6 p-1 col-sm-auto">
+        <ul class="popular-search-links">
+          <li><a href="https://www.gazelle.com/sell/cell-phone">Cash for Used Cell Phone</a></li>
+          <li><a href="https://www.gazelle.com/trade-in/ipad">Sell iPad</a></li>
+          <li><a href="https://www.gazelle.com/iphone/iphone-5">Sell iPhone 5</a></li>
+          <li><a href="https://www.gazelle.com/sell/macbook">Sell MacBook</a></li>
+          <li><a href="https://www.gazelle.com/is-gazelle-a-scam">Gazelle.com a scam?</a></li>
+          <li><a href="https://www.gazelle.com/sell/cell-phone">Sell Your Android Phone</a></li>
+          <li><a href="https://www.gazelle.com/iphone/iphone-7-plus">Sell iPhone 7 Plus</a></li>
+        </ul>
+      </div>
+      <div class="col-6 p-1 col-sm-auto">
+        <ul class="popular-search-links">
+          <li><a href="https://www.gazelle.com/iphone">Sell Broken iPhone</a></li>
+          <li><a href="https://www.gazelle.com/sell/macbook/macbook-air">Sell MacBook Air</a></li>
+          <li><a href="https://www.gazelle.com/reviews">Gazelle.com Reviews</a></li>
+          <li><a href="https://www.gazelle.com/sell/tablet/samsung">Sell Samsung Tablet</a></li>
+          <li><a href="https://www.gazelle.com/sell/cell-phone/samsung">Sell Galaxy S</a></li>
+          <li><a href="https://www.gazelle.com/business">Sell Cell Phones in Bulk</a></li>
+          <li><a href="https://buy.gazelle.com/buy-used-iphone-7-plus">Buy Used iPhone 7 Plus</a></li>
+        </ul>
+      </div>
+      <div class="col-6 p-1 col-sm-auto">
+        <ul class="popular-search-links">
+          <li><a href="https://www.gazelle.com/business">Sell Electronics in Bulk</a></li>
+          <li><a href="https://www.gazelle.com/trade-in/iphone">Trade-in iPhone</a></li>
+          <li><a href="https://www.gazelle.com/trade-in/ipad">Trade-in iPad</a></li>
+          <li><a href="https://buy.gazelle.com/buy/used/iphone-5">Buy Used iPhone 5</a></li>
+          <li><a href="https://buy.gazelle.com/buy/used/iphone-5s">Buy Used iPhone 5S</a></li>
+          <li><a href="https://buy.gazelle.com/buy-used-iphone">Buy Used iPhone</a></li>
+        </ul>
+      </div>
+      <div class="col-6 p-1 col-sm-auto">
+        <ul class="popular-search-links">
+          <li><a href="https://buy.gazelle.com/buy-used-cell-phone">Buy Used Cell Phones</a></li>
+          <li><a href="https://buy.gazelle.com/buy-used-ipad">Buy Used iPad</a></li>
+          <li><a href="https://buy.gazelle.com/buy/used/ipad-mini">Buy Used iPad Mini</a></li>
+          <li><a href="https://buy.gazelle.com/buy/used/ipad-2">Buy Used iPad 2</a></li>
+          <li><a href="https://buy.gazelle.com/buy/used/ipad-4">Buy Used iPad 4</a></li>
+          <li><a href="https://buy.gazelle.com/buy-used-iphone-7">Buy Used iPhone 7</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-lg-4">
+    <div class="row">
+      <div class="col-12 pt-3">
+        <h5 id="certifications" class="brandon-light text-uppercase font-weight-normal blue-100">Certifications</h5>
+      </div>
+      <div class="col-12 p-1 pl-3">
+        <%= link_to 'https://www.bbb.org/sdoc/business-reviews/recycling-computers-and-other-electronics/ecoatm-llc-in-san-diego-ca-172018258/#sealclick' do %>
+           <%= image_tag("https://seal-sandiego.bbb.org/seals/blue-seal-200-42-bbb-172018258.png", :target => "_blank", :border => 0, :alt => "EcoATM LLC BBB Business Review") %>
+        <% end %>
+        <a href="https://profile.globalsign.com/SiteSeal/siteSeal/profile/profile.do?p1=73d37b7b&amp;p2=0bcd099e1bcf6a66c9e8f067422309043647d42658875dc5479e743294b4e9014021145f29448e314ad16e991bc9697d95aca93e&amp;p3=432afb9f27df9cb29bf715bf3ab1700288283db5"><img src="//images.contentful.com/6xtl1lwcj8xd/6d9dtHo30ki6WKAaWcOi8c/d2a404a93db68810172172dc5a8250e8/siteSealImage.png" alt="Secure Global Sign"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 text-center fine-print">
+    <div class="p-3">
+    &copy;2014 - 2017 ecoATM, LLC. All Rights Reserved, Patents Pending. Gazelle is not affiliated with nor has it been authorized, sponsored, or otherwise approved by the manufacturers of the items available for trade-in or purchase. Gazelle and the Gazelle logo are trademarks of ecoATM, LLC, registered in the U.S. All other trademarks, logos and brands are the property of their respective owners. ecoATM, LLC CA DOJ #3711-2068
+    </div>
+  </div>
+</div>
