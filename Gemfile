@@ -13,7 +13,7 @@ gem 'devise'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
-gem 'paperclip', '~> 5.1'
+gem 'paperclip', '~> 5.2.0'
 gem 'angularjs-rails'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.7'
